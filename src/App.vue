@@ -3,7 +3,9 @@
      <h1>task menu</h1>
 <div>
 <form class="inputfield" @submit.prevent="create">
+
 <input v-model="newtodo" autocomplete="off">
+
 <button @click="create" >add task</button>
 
 </form>
@@ -11,8 +13,11 @@
 </div>
 <ul class="todolist">
 <li v-for="item in todos" :key="item.id" >
+
 <H3 :class="{done: item.completed}" @click="completed(item)">{{ item.content }}</H3>
+
 <button @click="remove(item)">delete task</button>
+
 </li>
 
 </ul>
@@ -21,6 +26,7 @@
 <button @click="markall">select all</button>
 
 </div>
+
 </div>
 
 </template>
